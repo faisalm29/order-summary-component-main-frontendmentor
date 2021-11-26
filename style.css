@@ -1,0 +1,161 @@
+:root {
+  --paleBlue: hsl(225, 100%, 94%);
+  --brigthBlue: hsl(245, 75%, 52%);
+  --veryPaleBlue: hsl(225, 100%, 98%);
+  --desaturatedBlue: hsl(224, 23%, 55%);
+  --darkBlue: hsl(223, 47%, 23%);
+  --white: hsl(0, 0%, 100%);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 50px 0;
+  min-height: 100%;
+  font-family: "Red Hat Display", sans-serif;
+  color: var(--darkBlue);
+  background: url(images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-color: var(--paleBlue);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+/* Helper class */
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex-jc-c {
+  justify-content: center;
+}
+
+.flex-jc-sb {
+  justify-content: space-between;
+}
+
+.text-desaturated-blue {
+  color: var(--desaturatedBlue);
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.btn-primary {
+  display: block;
+  margin-top: 30px;
+  text-decoration: none;
+  padding: 17px 0;
+  font-weight: 700;
+  color: var(--white);
+  border-radius: 10px;
+  background-color: var(--brigthBlue);
+  box-shadow: 0 23px 16px -1px hsl(224.2, 23.1%, 55.1%, 0.2);
+  transition: opacity 300ms ease-in-out;
+}
+
+.btn-primary:hover {
+  opacity: 0.7;
+}
+/* Helper class */
+
+.card {
+  max-width: 405px;
+  height: auto;
+  background-color: var(--white);
+  overflow: hidden;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 23px 16px 0px hsl(224.2, 23.1%, 55.1%, 0.1);
+}
+
+.card .card-hero {
+  width: 100%;
+  height: auto;
+}
+
+.card .card-body {
+  padding: 43px 42px 47px 42px;
+}
+
+.card .card-body > p {
+  margin-top: 24px;
+  color: var(--desaturatedBlue);
+}
+
+.card .card-body .subscription-plan {
+  margin-top: 20px;
+  padding: 24px 22px;
+  border-radius: 10px;
+  background-color: var(--veryPaleBlue);
+}
+
+.card .card-body .subscription-plan img {
+  margin-right: 20px;
+}
+
+.card .card-body .subscription-plan a {
+  color: var(--brigthBlue);
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 300ms ease-in-out;
+}
+
+.card .card-body .subscription-plan a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.card-body a:nth-child(odd) {
+  display: inline-block;
+  margin-top: 33px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--desaturatedBlue);
+  transition: color 300ms ease-in-out;
+}
+
+.card-body a:nth-child(odd):hover {
+  color: var(--darkBlue);
+}
+
+.attribution {
+  margin-top: 30px;
+  font-size: 11px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 50px 70px;
+    background: url(images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--paleBlue);
+  }
+}
